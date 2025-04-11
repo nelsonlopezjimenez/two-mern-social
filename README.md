@@ -40,6 +40,14 @@ This is the most current running version. I am not sure what nodejs is running. 
 1. main
 1. 0a
 as well as remote for all except 0a.
+1. npm run development
+1. npm start: NODE_ENV=production is not recognized
+1. npm run serve: failed at server script
+1. only npm run development works: compiles 95 hidden modules, then 378 hidden modules
+1. Currently is running branch chapter-5-pending
+1. Check if it runs with chapter05 branch.
+1. The problems when using other than 13 version are related to ssl: I added a ssl-legacy configuration
+
 
 #### Keep this version to run when testing astro rendering from 
 ~/Documents/hoque-shama/tested-tower app
