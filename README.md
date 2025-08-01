@@ -1,5 +1,60 @@
-# two-mern-social.git
+# two-mern-social-2025
 
+## 8.1.2025
+
+1. Original chapter five repository in folder mern-social-original-no-nodemodules
+1. Folder structure copy/pasted from that location into the root of two-mern-social-2025
+1. Claude used to refactor to latest versions
+
+## MERN-Social Refactored for 2025 - Updated Technology Stack
+
+This guide provides a complete refactoring of the MERN-Social application to use the latest versions of all technologies as of August 2025.
+
+## 🚀 Updated Technology Stack
+
+### Current Versions (August 2025)
+- **Node.js**: v22.17.1 (LTS) - Current LTS until April 2027
+- **React**: v19.1.1 - Latest stable with Server Components and Actions
+- **Express**: v5.0.1 - Latest major version with async/await support
+- **MongoDB**: v8.0+ - Latest with enhanced performance
+- **Mongoose**: v8.17.0 - Current stable with full MongoDB 8.0 support
+- **Material-UI**: v6.3.0 (@mui/material) - Current major version
+
+## 📁 Updated Project Structure
+
+```
+mern-social/
+├── client/                     # React 19 Frontend
+│   ├── public/
+│   │   ├── index.html
+│   │   └── manifest.json
+│   ├── src/
+│   │   ├── components/         # React components
+│   │   ├── hooks/             # Custom hooks
+│   │   ├── pages/             # Page components
+│   │   ├── utils/             # Utility functions
+│   │   ├── services/          # API services
+│   │   ├── context/           # React context
+│   │   ├── App.jsx
+│   │   └── index.js
+│   ├── package.json
+│   └── vite.config.js         # Using Vite instead of Create React App
+├── server/                     # Express 5 Backend
+│   ├── controllers/           # Route handlers
+│   ├── models/               # Mongoose models
+│   ├── routes/               # API routes
+│   ├── middleware/           # Express middleware
+│   ├── utils/                # Server utilities
+│   ├── config/               # Configuration files
+│   ├── app.js                # Express app setup
+│   └── server.js             # Server entry point
+├── shared/                    # Shared utilities
+├── .env.example
+├── .gitignore
+├── docker-compose.yml         # Docker setup for development
+├── package.json              # Root package.json
+└── README.md
+```
 ## 4.12.2025
 
 1. git@github.com:nelsonlopezjimenezchapter-five-mern-social.git

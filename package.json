@@ -1,0 +1,39 @@
+{
+  "name": "mern-social-2025",
+  "version": "2.0.0",
+  "description": "A modern MERN stack social media application with React 19 and Express 5",
+  "main": "server/server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "start": "node server/server.js",
+    "server:dev": "cd server && npm run dev",
+    "client:dev": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install",
+    "test": "cd server && npm test && cd ../client && npm test"
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=10.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/mern-social-2025.git"
+  },
+  "keywords": [
+    "react",
+    "express",
+    "mongodb",
+    "node",
+    "mern",
+    "social-media",
+    "react-19",
+    "express-5"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
