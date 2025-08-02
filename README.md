@@ -1,7 +1,37 @@
 # two-mern-social-2025
 
 ## 8.2.2025
+
 1.![Postman signin first](./server/public/image.png)
+1. Step1:Update Dependencies:
+```bash
+cd server
+
+# Remove Express 5 and related packages
+npm uninstall express express-async-handler
+
+# Install Express 4 and compatible packages
+npm install express@^4.19.2 express-async-errors@^3.1.1
+
+# Verify other dependencies are compatible
+npm install express-validator@^7.2.1 multer@^2.0.2
+```
+1. Step3:Test the Application
+```bash
+# Start the server
+npm run dev
+
+# Test the /register route in Postman
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "password123"
+}
+```
+
 ## 8.1.2025
 
 1. Original chapter five repository in folder mern-social-original-no-nodemodules
