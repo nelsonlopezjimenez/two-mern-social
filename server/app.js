@@ -8,7 +8,7 @@ import mongoSanitize from 'express-mongo-sanitize'
 import xss from 'xss-clean'
 import hpp from 'hpp'
 import cookieParser from 'cookie-parser'
-import asyncHandler from 'express-async-handler'
+import 'express-async-errors' // Restored for Express 4
 
 // Route imports
 import authRoutes from './routes/auth.js'
@@ -101,9 +101,5 @@ const globalErrorHandler = (err, req, res, next) => {
   })
 }
 
-// Apply error handling middleware
-app.use(globalErrorHandler)
 
-// Export asyncHandler for use in routes
-export { asyncHandler }
 export default app
