@@ -26,8 +26,6 @@ app.use(cors({
   origin: process.env.CLIENT_URL || 'http://localhost:3000',
   credentials: true
 }))
-// ======= MY OWN
-app.use(express.urlencoded({ extended: true}))
 
 // Rate limiting
 const limiter = rateLimit({
