@@ -1,5 +1,7 @@
 # two-mern-social-2025
 
+## 8.2.2025
+1.![Postman signin first](./server/public/image.png)
 ## 8.1.2025
 
 1. Original chapter five repository in folder mern-social-original-no-nodemodules
