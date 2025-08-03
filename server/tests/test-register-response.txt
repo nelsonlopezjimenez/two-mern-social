@@ -1,0 +1,24 @@
+{
+    "success": true,
+    "message": "User registered successfully",
+    "data": {
+        "id": "688f68e6dd834ebc08fb463a",
+        "name": "Gamma At Trued",
+        "email": "gamma@tru.ed",
+        "avatar": ""
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGY2OGU2ZGQ4MzRlYmMwOGZiNDYzYSIsImVtYWlsIjoiZ2FtbWFAdHJ1LmVkIiwiaWF0IjoxNzU0MjI4OTY2LCJleHAiOjE3NTQ4MzM3NjZ9.4rfMjsVOXzR7vld-fTnAn7kmv-Ihl5BFKKjzzldg7Xc"
+}
+
+Example of curl :
+curl -X POST \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c" \
+  -H "Content-Type: application/json" \
+  -d '{"message": "Hello API", "userId": 12345}' \
+  https://api.example.com/messages
+
+  curl -X POST \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGY2OGU2ZGQ4MzRlYmMwOGZiNDYzYSIsImVtYWlsIjoiZ2FtbWFAdHJ1LmVkIiwiaWF0IjoxNzU0MjI4OTY2LCJleHAiOjE3NTQ4MzM3NjZ9.4rfMjsVOXzR7vld-fTnAn7kmv-Ihl5BFKKjzzldg7Xc" \
+  -H "Content-Type: application/json" \
+  -d '{"email": "gamma@tru.ed", "password": 123456}' \
+  http://localhost:5000/api/auth/login 

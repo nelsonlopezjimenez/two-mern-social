@@ -49,4 +49,25 @@ router.get('/', auth, async (req, res) => {
 
 // Add other routes following the same pattern...
 
+router.get('/v2/', async (req, res) => {
+  const { page = 1, limit = 10 } = req.query
+
+  const posts = await Post.find({ isActive: true })
+    .limit(limit * 1)
+    .skip((page - 1) * limit)
+    .sort({ createdAt: -1 })
+
+  const total = await Post.countDocuments({ isActive: true })
+
+  res.json({
+    success: true,
+    data: posts,
+    pagination: {
+      current: parseInt(page),
+      pages: Math.ceil(total / limit),
+      total
+    }
+  })
+})
+
 export default router
