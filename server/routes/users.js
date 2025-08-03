@@ -25,11 +25,14 @@ const upload = multer({
 
 // @route   GET /api/users
 // @desc    Get all users
-// @access  Private
-router.get('/', auth, async (req, res) => {
-  const { page = 1, limit = 10, search } = req.query
+// @access  Private 
+// @access  Private NOT NOT NOT
+router.get('/', async (req, res) => {
+// router.get('/', auth, async (req, res) => {
+  console.log("====== line32 ====", req.query)
+  const { page = 1, limit = 10, search } = req.query; 
 
-  const query = { isActive: true, _id: { $ne: req.user._id } }
+  const query = { isActive: true }
   
   if (search) {
     query.$text = { $search: search }
@@ -55,5 +58,19 @@ router.get('/', auth, async (req, res) => {
 })
 
 // Add other routes following the same pattern...
+
+router.get('/v2', async (req, res) => {
+ let limit = 10;
+  const users = await User.find()
+    .select('name email avatar bio followerCount followingCount')
+   
+    .sort({ createdAt: -1 })
+
+
+  res.json({
+    success: true,
+    data: users,
+  })
+})
 
 export default router

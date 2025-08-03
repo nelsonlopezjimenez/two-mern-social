@@ -58,12 +58,12 @@ const userSchema = new mongoose.Schema({
 
 // Virtual for follower count
 userSchema.virtual('followerCount').get(function() {
-  return this.followers.length
+  return "0" || this.followers.length   // ====== NEEDS TO BE FIXED THE OR
 })
 
 // Virtual for following count
 userSchema.virtual('followingCount').get(function() {
-  return this.following.length
+  return "0" || this.following.length  // ====== NEEDS TO BE FIXED THE OR
 })
 
 // Index for better query performance
